@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ethiopian Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calendar">
+        <div class="calendar-header">
+            <button id="prevMonth" class="nav-button">&lt;</button>
+            <span id="monthYear" onclick="openMonthYearSelector()">Month Year</span>
+            <button id="nextMonth" class="nav-button">&gt;</button>
+        </div>
+        <table id="calendarBody">
+            <thead>
+                <tr id="dayAbbreviations">
+                    <th>ሰኞ</th>
+                    <th>ማክሰኞ</th>
+                    <th>ረቡዕ</th>
+                    <th>ሐሙስ</th>
+                    <th>አርብ</th>
+                    <th>ቅዳሜ</th>
+                    <th>እሁድ</th>
+
+                </tr>
+            </thead>
+            <tbody id="calendarDays">
+                <!-- Calendar days will be rendered here dynamically -->
+            </tbody>
+        </table>
+        <input type="time" id="time" class="time-input">
+        <div id="selectedDateTime"></div>
+    </div>
+
+    <div id="monthYearSelector" class="overlay">
+        <div id="monthSelector" class="popup">
+            <div class="popup-header">
+                <span>Select Month and Year</span>
+                <button class="close-button" onclick="closeMonthYearSelector()">&times;</button>
+            </div>
+            <div class="months"></div>
+            <input type="number" id="yearInput" placeholder="Year" class="year-input">
+            <button onclick="setYear()" class="set-year-button">Set Year</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
